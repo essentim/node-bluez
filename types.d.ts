@@ -60,7 +60,7 @@ declare namespace Bluez {
         RequestPasskey(...args: any[]): void;
         RequestPinCode(...args: any[]): void;
     }
-    class Device {
+    class Device extends NodeJS.EventEmitter {
         constructor(...args: any[]);
         Connect(): Promise<void>;
         ConnectProfile(uuid: string): Promise<void>;
@@ -68,6 +68,9 @@ declare namespace Bluez {
         DisconnectProfile(uuid: string): Promise<void>;
         Pair(): Promise<void>;
         CancelPairing(): Promise<void>;
+
+        on(event: "rssiChanged", listener: (rssi: any) => void): this;
+        on(event: "manufacturerDataChanged", listener: (manufacturerData: any) => void): this;
         
         getProperties(): Promise<any>;
         getProperty(name: string): Promise<any>;
