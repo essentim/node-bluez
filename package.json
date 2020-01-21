@@ -22,16 +22,16 @@
   "license": "MIT",
   "homepage": "https://github.com/waeco/node-bluez#readme",
   "dependencies": {
-    "dbus": "^1.0.5",
+    "dbus": "^1.0.6",
     "errno": "^0.1.5",
     "nan": "^2.14.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/waeco/node-bluez.git"
+    "url": "git://github.com/essentim/node-bluez.git"
   },
   "bugs": {
-    "url": "https://github.com/waeco/node-bluez/issues"
+    "url": "https://github.com/essentim/node-bluez/issues"
   },
   "os": [
     "!win32"
