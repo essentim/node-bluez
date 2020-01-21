@@ -12,6 +12,9 @@
   "main": "index.js",
   "types": "types.d.ts",
   "scripts": {
+    "rsync:dev": "./scripts/sync-remote.sh essentim@192.168.192.119:/home/essentim/ble-agent/node_modules/bluez || echo; echo terminated",
+    "rsync:dev-vn2": "./scripts/sync-remote.sh essentim@172.28.200.43:/home/essentim/ble-agent/node_modules/bluez || echo; echo terminated",
+    "rsync:dev-local": "./scripts/sync-remote.sh essentim@192.168.0.146:/home/essentim/ble-agent/node_modules/bluez || echo; echo terminated",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp configure build"
   },
